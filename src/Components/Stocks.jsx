@@ -38,18 +38,18 @@ function Stocks() {
 
   useEffect(() => {
 
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await axios.get("http://localhost:5000/api/stocks");
-    //     if (response.status === 200) {
-    //       console.log(response.data)
-    //       setRiskScore(response.data)
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    // fetchData();
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://at-africa-back.vercel.app/api/stocks");
+        if (response.status === 200) {
+          console.log(response.data)
+          setRiskScore(response.data)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
    
     const metrics =  data.risk_score[getValue];
     const filteredMetrics = Object.entries(metrics)
