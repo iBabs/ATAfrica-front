@@ -5,7 +5,7 @@ import './Nav.css'
 function NavBar() {
   return (
     <header>
-        <Link to='/'><img src="/wealth.svg" alt="logo" /></Link>
+        <Link to='/'><h2 className="logo">Stocka</h2></Link>
 
         <nav>
             <ul>
